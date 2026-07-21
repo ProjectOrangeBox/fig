@@ -1,0 +1,32 @@
+{
+    "name": "orange/fig",
+    "description": "Lightweight view plugin loader with a bundled set of view helper plugins.",
+    "type": "library",
+    "homepage": "https://github.com/ProjectOrangeBox/fig",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Don Myers",
+            "email": "donmyers@me.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/ProjectOrangeBox/fig/issues",
+        "source": "https://github.com/ProjectOrangeBox/fig"
+    },
+    "require": {
+        "php": ">=8.4",
+        "orange/framework": "dev-main"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^13.2"
+    },
+    "autoload": {
+        "classmap": [
+            "src/fig.php",
+            "src/FigException.php"
+        ]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
