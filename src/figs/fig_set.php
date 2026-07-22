@@ -8,7 +8,7 @@
  */
 function fig_set(string $name, mixed $value, int $append = fig::NORMAL): void
 {
-    logMsg('INFO', __METHOD__ . ' ' . $name);
+    logMsg('DEBUG', __METHOD__ . ' ' . $name);
 
     if (!isset(fig::$data[$name])) {
         if (is_array($value)) {

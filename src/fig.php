@@ -56,7 +56,7 @@ class fig
      */
     public static function configure(array $configFig, DataInterface $data)
     {
-        logMsg('INFO', __METHOD__);
+        logMsg('DEBUG', __METHOD__);
 
         require_once __DIR__ . '/FigException.php';
 
@@ -82,7 +82,7 @@ class fig
      */
     public static function addPath(string $path, bool $first = false): void
     {
-        logMsg('INFO', __METHOD__);
+        logMsg('DEBUG', __METHOD__);
 
         $path = rtrim($path, DIRECTORY_SEPARATOR);
 
@@ -134,7 +134,7 @@ class fig
      */
     public static function __callStatic($name, $arguments)
     {
-        logMsg('INFO', __METHOD__ . ' ' . $name);
+        logMsg('DEBUG', __METHOD__ . ' ' . $name);
 
         $functionName = 'fig_' . $name;
 
