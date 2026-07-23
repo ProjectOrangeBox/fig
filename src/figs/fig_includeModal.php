@@ -13,7 +13,7 @@ function fig_includemodal(?string $name, ?string $view, array|string $data = [])
         $modalSize = isset($data['size']) ? 'modal-' . $data['size'] : '';
     }
 
-    echo '<div id="' . str_replace(' ', '', lcfirst(ucwords(preg_replace("/[^ \w]+/", ' ', $name)))) . '" rv-theme-modal-show="' . $name . '" class="modal fade ' . $modalSize . '" role="dialog" tabindex="-1">';
+    echo '<div id="' . str_replace(' ', '', lcfirst(ucwords((string) preg_replace("/[^ \w]+/", ' ', (string) $name)))) . '" rv-theme-modal-show="' . $name . '" class="modal fade ' . $modalSize . '" role="dialog" tabindex="-1">';
     echo '<div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">';
     echo '<div class="modal-content">';
     echo '<div class="modal-body">';

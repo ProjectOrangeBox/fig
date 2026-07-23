@@ -7,7 +7,7 @@ function fig_date($timestamp = null, $format = null)
     if ($timestamp == 'now') {
         $timestamp = time();
     } else {
-        $timestamp = (is_integer($timestamp)) ? $timestamp : strtotime($timestamp);
+        $timestamp = (is_integer($timestamp)) ? $timestamp : strtotime((string) $timestamp);
     }
 
     return ($timestamp > 1000) ? date($format, $timestamp) : '';
