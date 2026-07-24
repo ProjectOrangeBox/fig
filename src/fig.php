@@ -10,6 +10,37 @@ use orange\framework\interfaces\DataInterface;
 
 /**
  * Collection of helpers that load and execute view plugin templates.
+ *
+ * Plugins are invoked as static calls (e.g. fig::value(...)) routed through
+ * __callStatic() to the matching fig_<name>() plugin function. The @method tags
+ * below mirror those plugins so static analysis can see the facade's real API.
+ *
+ * @method static void   append(string $name, string $value)
+ * @method static void   block(string $name)
+ * @method static string currentBlock(string $name)
+ * @method static mixed  date($timestamp = null, $format = null)
+ * @method static string e(string $html)
+ * @method static mixed  element(string $tag, array $attr = [], string $content = '', bool $escape = true)
+ * @method static void   end(int $append = 0)
+ * @method static string escape(string $html)
+ * @method static void   extends(string $view)
+ * @method static mixed  get(string $variableName, mixed $default = null)
+ * @method static bool   hasBlock(string $name)
+ * @method static string hiddenIf(string $format = '', string $value = '', string $considerEmpty = '')
+ * @method static bool   inBlock()
+ * @method static void   include(?string $view, array $data = [])
+ * @method static void   includeModal(?string $name, ?string $view, array|string $data = [])
+ * @method static string map(string $value, array $map)
+ * @method static mixed  money(mixed $number = 0)
+ * @method static void   prepend(string $name, string $value)
+ * @method static void   removeBlock(string $name)
+ * @method static void   render()
+ * @method static void   set(string $name, mixed $value, int $append = 0)
+ * @method static string showIf(string $format = '', string $value = '', string $considerNotEmpty = '')
+ * @method static string sprintf(string $format = '', array $values = [], bool $escape = true)
+ * @method static mixed  v(string $variableName, mixed $default = '', bool $escape = false)
+ * @method static mixed  value(string $variableName, mixed $default = '', bool $escape = false)
+ * @method static mixed  wrap(array|string $input, string $prefix = '', string $suffix = '', bool $escape = true)
  */
 class fig
 {
