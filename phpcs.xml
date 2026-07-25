@@ -15,4 +15,18 @@
         <exclude name="Generic.Files.LineLength.TooLong"/>
     </rule>
 
+    <!-- fig is deliberately a global-namespace facade with a short lower-case
+         name: it is called as fig::value(...) from inside view templates, which
+         is why composer.json loads both files by classmap rather than PSR-4.
+         Namespacing or renaming it would break every template that uses it, so
+         these two sniffs are switched off for these files only - everywhere
+         else in the package they still apply. -->
+    <rule ref="PSR1.Classes.ClassDeclaration.MissingNamespace">
+        <exclude-pattern>src/fig\.php</exclude-pattern>
+        <exclude-pattern>src/FigException\.php</exclude-pattern>
+    </rule>
+    <rule ref="Squiz.Classes.ValidClassName.NotCamelCaps">
+        <exclude-pattern>src/fig\.php</exclude-pattern>
+    </rule>
+
 </ruleset>
