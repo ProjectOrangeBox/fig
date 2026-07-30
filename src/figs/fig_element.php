@@ -1,6 +1,9 @@
 <?php
 
-function fig_element(string $tag, array $attr = [], string $content = '', bool $escape = true)
+/**
+ * @param array<string, mixed> $attr
+ */
+function fig_element(string $tag, array $attr = [], string $content = '', bool $escape = true): string
 {
     $selfClosing = ['area', 'base', 'br', 'embed', 'hr', 'iframe', 'img', 'input', 'link', 'meta', 'param', 'source'];
 

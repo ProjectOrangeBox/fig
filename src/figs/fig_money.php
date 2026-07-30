@@ -1,6 +1,6 @@
 <?php
 
-function fig_money(mixed $number = 0)
+function fig_money(mixed $number = 0): string
 {
     $number = (float)$number;
 

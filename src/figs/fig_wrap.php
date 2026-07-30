@@ -1,6 +1,9 @@
 <?php
 
-function fig_wrap(array|string $input, string $prefix = '', string $suffix = '', bool $escape = true)
+/**
+ * @param array<array-key, mixed>|string $input
+ */
+function fig_wrap(array|string $input, string $prefix = '', string $suffix = '', bool $escape = true): string
 {
     if (is_string($input)) {
         $html = $prefix . (($escape) ? htmlentities($input) : $input) . $suffix;

@@ -3,6 +3,9 @@
 /**
  * include another template
  */
+/**
+ * @param array<string, mixed>|string $data
+ */
 function fig_includemodal(?string $name, ?string $view, array|string $data = []): void
 {
     // sm, lg, xl - medium size is default

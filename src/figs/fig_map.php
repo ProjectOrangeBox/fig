@@ -10,6 +10,9 @@
  * then TypeError'd on returning null. It is a key lookup, so the guard checks
  * for a key.
  */
+/**
+ * @param array<array-key, mixed> $map
+ */
 function fig_map(string $value, array $map): string
 {
     if (!array_key_exists($value, $map)) {

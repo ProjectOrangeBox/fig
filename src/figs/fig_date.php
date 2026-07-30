@@ -1,6 +1,6 @@
 <?php
 
-function fig_date($timestamp = null, $format = null)
+function fig_date(mixed $timestamp = null, ?string $format = null): string
 {
     $format = (!empty($format)) ? $format : config('application', 'human date', 'F jS, Y, g:i a');
 
